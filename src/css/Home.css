@@ -1,0 +1,42 @@
+#home
+{
+    /* display: flex; */
+    /* margin: -100px; */
+    /* padding: -10px 0 0 -20px; */
+    padding: 0;
+    /* height: 100vh; */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border: 2px solid #333;
+}
+
+#home img
+{
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+}
+
+#home p
+{
+    position: relative;
+    color: white;
+    /* font-weight: 800; */
+    font-size: larger;
+}
+
+#home button
+{
+    position: relative;
+    color: white;
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
