@@ -1,0 +1,43 @@
+#contact
+{
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
+}
+
+#contact h1
+{
+    text-align: center;
+    /* margin-bottom: 30px; */
+}
+
+#contact .box
+{
+    width: 6%;
+    border: 2px solid #333;
+    /* justify-self: center; */
+    align-self: center;
+    margin: 8px 0 30px 0;
+}
+
+#contact input,button
+{
+    /* gap: 10px; */
+    margin: 10px 0;
+    padding: 8px 10px;
+    border-radius: 5px;
+}
+
+#contact input
+{
+    /* border-top: none;
+    border-left: none;
+    border-right: none; */
+    border-color: #333;
+}
+
+#contact textarea
+{
+    padding: 10px 10px 50px 10px;
+    border-radius: 5px;
+}
