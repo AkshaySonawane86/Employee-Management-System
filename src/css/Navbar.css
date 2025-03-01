@@ -10,10 +10,12 @@ body {
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    height: 100vh; /* Full viewport height */
+    height: 100vh;
+    overflow-x: hidden;
+    position: relative;
   }
 
-  /* Container for the whole layout */
+  
   .container {
     /* display: flex;
     height: 100vh;  */
@@ -21,7 +23,7 @@ body {
     flex-grow: 1;
   }
 
-  /* Left side menu */
+
   .left-menu {
     width: 250px;
     background-color: #333;
@@ -47,7 +49,6 @@ body {
     background-color: #575757;
   }
 
-  /* Right content area */
   /* .right-content {
       margin-left: 250px;
     flex-grow: 1;
@@ -62,4 +63,81 @@ body {
   {
     width: 100%;
     min-height: 100vh;
+  }
+
+
+  @keyframes pulse {
+    0%, 100% {
+      background-color: #0f2027;
+    }
+    50% {
+      background-color: #203a43;
+    }
+  }
+  
+  .App {
+    text-align: center;
+    min-height: 100vh;
+    animation: pulse 10s infinite ease-in-out; 
+  }
+  
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1a1a; 
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #00e676;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.8);
+  }
+  
+  
+  .logo h1 {
+    font-size: 2rem;
+    margin: 0;
+    color: #00e676; 
+    text-transform: uppercase;
+    letter-spacing: 3px; 
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-links a {
+    color: #00e676;
+    text-decoration: none;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    position: relative;
+    transition: color 0.3s, background-color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #ff1744; 
+    background-color: transparent;
+    transform: translateY(-2px); 
+  }
+  
+  .nav-links a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -3px;
+    left: 0;
+    background-color: #ff1744;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .nav-links a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
   }
